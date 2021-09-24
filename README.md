@@ -22,13 +22,14 @@ Initialize your own database and setup your envirovment variables in .env file. 
 
 You can try the web application with two different user and role. 
 
-Admin user credentials:
-username: admin@admin.com
-password: secret19
+- Admin user credentials:
+    - username: admin@admin.com
+    - password: secret19
 
-Teszt user credentials:
-username: teszt@teszt.com
-password: secret19
+- Teszt user credentials:
+    - username: teszt@teszt.com
+    - password: secret19
 
-##Link
-https://www.youtube.com/watch?v=_oM6TDryNzc
+## Link
+
+- https://www.youtube.com/watch?v=_oM6TDryNzc
