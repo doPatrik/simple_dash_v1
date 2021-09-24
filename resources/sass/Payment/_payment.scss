@@ -1,0 +1,281 @@
+.payment-container {
+
+    .data-container {
+        margin: 2rem;
+    }
+
+    .data-label {
+        margin: 1.5rem 0;
+        position: relative;
+    }
+
+    .data-label::after {
+        content: "";
+        width: 200px;
+        height: 5px;
+        background: #560bad;
+        position: absolute;
+        left: 0;
+        top: 2.3rem;
+    }
+
+    .card-content {
+        display: grid;
+        grid-template-columns: 3% 15% 25% 25% 32%;
+        align-items: center;
+        justify-items: center;
+        height: 60px;
+        padding: 0 1rem;
+        margin-bottom: .5rem;
+        position: relative;
+        color: $grey-text-color;
+        box-shadow: 2px 2px 5px #888888;
+    }
+
+    .card-content .tagColor {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: .5rem;
+        background: chartreuse;
+
+    }
+
+    .card-content .deadLine {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: 500;
+    }
+
+    .card-content .deadLine span {
+        color: $light-grey-text-color;
+    }
+
+    .card-content .buttons {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .card-content .buttons .payment{
+        border: none;
+        outline: none;
+        width: 150px;
+        padding: .6rem;
+        border-radius: 50px;
+        color: #fff;
+        background: $button-color;
+
+        &:disabled {
+            opacity: .5;
+        }
+    }
+
+    .card-content .buttons .__button {
+        margin: 0 .5rem;
+        box-shadow: 1px 1px 5px #888888;
+    }
+
+    .card-content .buttons .__button.editButton ,
+    .card-content .buttons .__button.deleteButton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        background: #dedede;
+        border-radius: 50%;
+    }
+
+    .card-content .buttons .__button.payment:hover,
+    .card-content .buttons .__button.editButton:hover,
+    .card-content .buttons .__button.deleteButton:hover,
+    .card-content .buttons .__button.paid:hover {
+        box-shadow: none;
+    }
+
+    .card-content .buttons .paid {
+        color: green;
+        background: #b5f5b5;
+        width: 196px;
+        border-radius: 50px;
+        padding: .2rem 1rem;
+        font-size: .8rem;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 1050px) {
+        .data-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: left;
+        }
+
+        .data-content > div {
+            margin: 1rem;
+        }
+
+        .data-container {
+            margin: 0;
+        }
+
+        .card-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+            padding: 1rem;
+            height: 280px;
+            min-width: 290px;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .data-content {
+            flex-direction: column;
+        }
+
+        .data-content > div {
+            margin: 1rem 0;
+        }
+
+        .card-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+            padding: 1rem;
+            width: 100%;
+        }
+    }
+
+    .card-container{
+        border-radius: 15px;
+        width: 550px;
+        box-shadow: 2px 5px 7px #888888;
+        margin: 1rem auto;
+
+        h2 {
+            background: #2ed573;
+            color: #fff;
+            border-radius: 15px 15px 0 0;
+            text-align: center;
+        }
+        .header{
+            background: #dfe4ea;
+            color: #0c2461;
+            font-weight: bold;
+            padding: 15px;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .gridContainer{
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: 450px;
+            text-align: left;
+            width: 450px;
+        }
+
+        .innerGrid{
+            display: grid;
+            grid-template-columns: 280px auto;
+            grid-template-rows: auto;
+            justify-content: left;
+            align-items: center;
+            padding: 15px;
+        }
+
+        .billName p:first-child{
+            font-weight: bold;
+            color: #000;
+            font-size: 1em;
+        }
+
+        .billName p{
+            margin:0;
+            color:#a4b0be;
+            font-size: 0.8em;
+        }
+
+        .price{
+            font-weight: bold;
+            color: #57606f;
+        }
+
+        #dtBorder{
+            border-top: 2px dashed #57606f;
+            background: #dfe4ea;
+            border-radius: 0 0 15px 15px;
+        }
+
+        .strong{
+            font-weight: bold;
+            color: #000;
+        }
+
+        #payButton{
+            justify-content: center;
+            margin: 35px 0;
+        }
+    }
+
+    @media screen and (max-width: 660px) {
+        .card-container{
+            width: 400px;
+            margin: 1rem auto;
+
+            .header{
+                text-align: center;
+            }
+
+            .gridContainer{
+                margin: 50px auto;
+                display: grid;
+                grid-template-columns: 380px;
+                text-align: left;
+                width: 380px;
+            }
+
+            .innerGrid{
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                justify-content: center;
+                align-items: center;
+                padding: 15px;
+                text-align: center;
+            }
+        }
+    }
+
+    @media screen and (max-width: 520px) {
+        .card-container{
+            width: 320px;
+            margin: 1rem auto;
+
+            .header{
+                text-align: center;
+            }
+
+            .gridContainer{
+                margin: 30px auto;
+                display: grid;
+                grid-template-columns: 1fr;
+                text-align: left;
+                width: 300px;
+            }
+
+            .innerGrid{
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                justify-content: center;
+                align-items: center;
+                padding: 15px;
+                text-align: center;
+            }
+        }
+    }
+}

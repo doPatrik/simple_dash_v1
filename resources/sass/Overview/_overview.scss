@@ -1,0 +1,35 @@
+ .filters-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .filter-item {
+        margin: 1rem;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        .search-text {
+            border: 1px solid rgba(0,0,0,.2);
+            outline: none;
+            padding-left: 2rem;
+            height: 37px;
+            border-radius: 5px;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 0;
+            border-right: 1px solid rgba(0,0,0, .5);
+            padding: 0 .3rem;
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            .fa-search {
+                color: #545b62;
+            }
+        }
+    }
+}

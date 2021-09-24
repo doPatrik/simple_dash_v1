@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+.new-bill-container {
+    position: relative;
+
+    .backDrop{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0,0,0, .5);
+        z-index: 20;
+    }
+
+    .buttons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    a.subPageLink{
+        text-decoration: none;
+    }
+
+    .base-button{
+        height: 50px;
+        margin: 0 20px;
+        font-size: 1em;
+
+        font-family: 'Playfair Display', serif;
+        border-radius: 30px;
+        color: #fff;
+        border: none;
+        outline: none;
+        padding: 15px;
+        box-shadow: 3px 5px 5px #888888;
+
+        &:hover {
+            box-shadow: none;
+        }
+    }
+
+    .light{
+        background: #40407a;
+
+    }
+
+    .dark{
+        background: #2c2c54;
+    }
+
+    .green{
+        background: lightgreen;
+        color: #000;
+    }
+
+    .fa-plus-circle{
+        margin-left: 10px;
+        font-size: 1.2rem;
+    }
+
+    .card {
+        text-align: center;
+        margin: 2rem auto;
+        background: #fff;
+        border-radius: 15px ;
+        box-shadow: 5px 10px 18px #888888;
+        border: none;
+        max-width: 900px;
+    }
+
+    .card .title{
+        background: #3c6382;
+        font-family: 'Playfair Display', serif;
+        border-radius: 15px 15px 0 0;
+        color: #fff;
+    }
+
+    .card .text{
+        margin: 20px;
+    }
+
+
+    .card .billText {
+        margin: 1rem;
+        font-size: 16px;
+        padding: 0;
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .mainText{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin: 2rem 1rem;
+        padding:0;
+    }
+
+    #billDatas{
+        //display: none;
+    }
+
+    .bill{
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 1rem;
+        border: 1px solid #000;
+        padding: 15px 15px 0 15px;
+        background: coral;
+        font-weight: bold;
+
+        .bill-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+        }
+    }
+
+    .egyebAdat{
+        text-align: left;
+        border: 1px solid #000;
+        padding: 15px;
+    }
+
+    .fas.fa-edit{
+        color: #fff;
+        margin-left: 5px;
+        cursor: pointer;
+    }
+
+    .fas.fa-edit:hover{
+        color: #ecf0f1;
+    }
+
+    #addNewBill{
+        margin-bottom: 30px;
+    }
+
+    .popup{
+        background: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 10px;
+        padding:20px;
+        color: #000000;
+    }
+
+    #providerId{
+        display: none;
+    }
+
+    .popup input{
+        width: 200px;
+        margin: 5px 0;
+        outline: none;
+        background: #dfe6e9;
+        height: 30px;
+        border-radius: 5px;
+        color:#718093;
+        padding-left:10px;
+        border: .5px solid #b2bec3;
+
+    }
+
+    .confirmButton{
+        display: block;
+        margin: 5px auto;
+        width: 100px;
+        border-radius: 10px;
+        border: none;
+        color: #fff;
+        background: #40407a;
+        outline:none;
+    }
+
+    .confirmButton:hover{
+        background:#6394bb;
+    }
+
+    .rMessage{
+        margin: 0.5rem auto;
+        align-items: center;
+        justify-content: center;
+
+        a {
+            line-height: 1;
+        }
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .new-bill-container {
+        .bill{
+            width: 100%;
+
+            .bill-item {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+    }
+}
